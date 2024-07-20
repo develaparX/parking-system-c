@@ -56,11 +56,11 @@ class Program
                             Console.WriteLine("Parking lot is not created. Please create a parking lot first.");
                             break;
                         }
-                        Console.Write("Plat Nomor Kendaraan: ");
+                        Console.Write("Vehicle Plate Number: ");
                         string registrationNumber = Console.ReadLine();
-                        Console.Write("Warna Kendaraan: ");
+                        Console.Write("Vehicle Color: ");
                         string color = Console.ReadLine();
-                        Console.Write("Jenis Kendaraan (Mobil/Motor): ");
+                        Console.Write("Vehicle Type (Mobil/Motor): ");
                         if (Enum.TryParse(Console.ReadLine(), true, out VehicleType type))
                         {
                             parkingSystem.ParkVehicle(new Vehicle(registrationNumber, color, type));
@@ -77,7 +77,7 @@ class Program
                             Console.WriteLine("Parking lot is not created. Please create a parking lot first.");
                             break;
                         }
-                        Console.Write("Pilih nomor kendaraan yang ingin keluar: ");
+                        Console.Write("Select the parking slot for the vehicle that wants to exit: ");
                         if (int.TryParse(Console.ReadLine(), out int slotNumber))
                         {
                             parkingSystem.Leave(slotNumber);
@@ -103,7 +103,7 @@ class Program
                             Console.WriteLine("Parking lot is not created. Please create a parking lot first.");
                             break;
                         }
-                        Console.Write("Jenis Kendaraan (Mobil/Motor): ");
+                        Console.Write("Vehicle Type (Mobil/Motor): ");
                         if (Enum.TryParse(Console.ReadLine(), true, out VehicleType reportType))
                         {
                             parkingSystem.ReportTypeOfVehicles(reportType);
@@ -138,7 +138,7 @@ class Program
                             Console.WriteLine("Parking lot is not created. Please create a parking lot first.");
                             break;
                         }
-                        Console.Write("Warna Kendaraan: ");
+                        Console.Write("Vehicle Color: ");
                         string reportColor = Console.ReadLine();
                         parkingSystem.ReportVehiclesWithColor(reportColor);
                         break;
@@ -149,7 +149,7 @@ class Program
                             Console.WriteLine("Parking lot is not created. Please create a parking lot first.");
                             break;
                         }
-                        Console.Write("Warna Kendaraan: ");
+                        Console.Write("Vehicle Color: ");
                         string colorForSlots = Console.ReadLine();
                         parkingSystem.ReportSlotsWithColor(colorForSlots);
                         break;
@@ -160,7 +160,7 @@ class Program
                             Console.WriteLine("Parking lot is not created. Please create a parking lot first.");
                             break;
                         }
-                        Console.Write("Plat Nomor Kendaraan: ");
+                        Console.Write("Vehicle Plate Number: ");
                         string reportRegistrationNumber = Console.ReadLine();
                         parkingSystem.ReportSlotForRegistrationNumber(reportRegistrationNumber);
                         break;
